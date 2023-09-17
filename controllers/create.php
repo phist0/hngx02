@@ -4,20 +4,21 @@
 //include dirname(__FILE__) . '/my_file.php';
 require dirname(__FILE__) . "/../inc/db_connect.php";
 $name  = $_POST["name"];
-$email = $_POST["email"];
+///$email = $_POST["email"];
 
 is_string($name)
 or  die("Only string input allowed");
 
 	
 
-is_string($email)
-or   die("Only string input allowed");
+///is_string($email)
+///or   die("Only string input allowed");
 
 
 
 $response = array();
-$sql = "INSERT INTO people (name, email) VALUES ('$name', '$email')";
+///$sql = "INSERT INTO people (name, email) VALUES ('$name', '$email')";
+$sql = "INSERT INTO people (name) VALUES ('$name')";
 $sql2 = "SELECT * FROM  people WHERE id = ( SELECT MAX(id) FROM people )";
 //$result = $con->query($sql);
 
@@ -33,7 +34,7 @@ if($result == TRUE){
   $row = mysqli_fetch_assoc($result2);
   $response["id"] = $row["id"];
   $response["name"] = $row["name"];
-  $response["email"] = $row["email"];
+///  $response["email"] = $row["email"];
 
 //  $response2 = ["id" => "$id", "name" => $name, "email" => $email];
   header('Content-Type: application/json'); 

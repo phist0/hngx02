@@ -22,7 +22,7 @@ if($con){
     $row = mysqli_fetch_assoc($result2);
     $response["id"] = $row["id"];
     $response["name"] = $row["name"];
-    $response["email"] = $row["email"];
+///    $response["email"] = $row["email"];
 
   //  header('Content-Type: application/json');
   //  echo json_encode($response, JSON_PRETTY_PRINT);

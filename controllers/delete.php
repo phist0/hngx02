@@ -22,7 +22,7 @@ if($con){
     $row = mysqli_fetch_assoc($result);
     $response["id"] = $row["id"];
     $response["name"] = $row["name"];
-    $response["email"] = $row["email"];
+//    $response["email"] = $row["email"];
 /*
     $x = 0;
     while($row = mysql_fetch_assoc($result)){
