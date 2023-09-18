@@ -18,5 +18,13 @@ if($uri === "/api" && $_SERVER["REQUEST_METHOD"] === "POST"){
 }
 
 //echo "<h1>  Hello World  </h1>"
+//
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<h1>  Visit the /api  endpoint of this api  to perform CRUD actions on users!  </h1>";
+
+
 
 ?>
